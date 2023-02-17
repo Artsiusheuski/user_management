@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora&display=swap');
 
 @import "./styles/searchBar.css";
 @import "./styles/header.css";
 @import "./styles/main.css";
 @import "./styles/footer.css";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora&display=swap');
 * {
   font-family: 'DM Sans';
   box-sizing: border-box;
