@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora&display=swap');
+
+@import "./styles/searchBar.css";
+@import "./styles/header.css";
+@import "./styles/main.css";
+@import "./styles/footer.css";
+
+* {
+  font-family: 'DM Sans';
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #4A4F5E;
+  font-size: 16px;
+}
+
+#root{
+  margin: 0 auto;
+  max-width: 1286px;
+  display: grid;
+  grid-template-columns: 3% 1fr 3%;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background-color: #ffff;
+}
+
+a {
+  text-decoration:none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+.wrapper {
+  display: grid;
+  height: 100%;
+  width: 100%;   
+  grid-column: 2/3;
+  grid-template-areas:
+    "searchBar"
+    "header"
+    "main";
+    grid-template-rows: 15vh 25vh 1fr ;
+}
+
+@media (max-width:665px) {
+  .wrapper {
+      grid-column: 1/4;
+      grid-template-columns: 3% 1fr 3%;
+  }
+}

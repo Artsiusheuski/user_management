@@ -1,0 +1,26 @@
+@import  "./users.css";
+@import  "./onlineUsers.css";
+
+.main_wrapper {
+  grid-area: main;
+  display: grid;
+  grid-template-rows:1fr 2fr 1fr;
+}
+
+.main_wrapper h1 {
+  font-size: 36px;
+  color: #0000ff;
+  text-align: center;
+}
+
+@media (max-width:665px) {
+  .main_wrapper{
+    grid-column: 2/3;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+.searchBar_wrapper {
+  grid-area: searchBar;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.searchBar_wrapper p {
+  display: none;
+}
+
+
+.searchBar_search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 6px 0px 12px;
+  width: 90%;
+  height: 44px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05), 0px 6px 24px rgba(0, 0, 0, 0.04), inset 0px 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  order: 0;
+  align-self: stretch;
+}
+
+.searchBar_search input {
+  width: 85%;
+  padding: 0px 10px;
+}
+
+.searchBar_search_rigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 57px;
+  height: 32px;
+  background: #F2F4F8;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+
+::placeholder {
+  color: #B7BAC8
+}
+
+.searchBar_search span {
+  display: flex;
+  color: #7A8194;
+}
+
+.searchBar_filter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.searchBar_filter div {
+  height: 44px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #e6e8ee;
+}
+
+.searchBar_filter div span {
+  padding: 0 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.searchBar_filter_div {
+  margin-right: 2%;
+}
+
+.searchBar_filter button {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar_mobile_menu{
+  display: none;
+}
+
+.searchBar_mobile_menu img{
+  display: none;
+}
+
+
+@media(max-width:992px) {
+  .searchBar_wrapper {
+    grid-area: searchBar;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: end;
+    grid-template-columns: 20% 50% 30%;
+  }
+
+  input{
+  font-size: 14px;
+}
+
+  .searchBar_wrapper p {
+    background: url('../img/logo.png') 50% 20% no-repeat;
+    display: flex;
+    opacity: .8;
+  }
+}
+
+
+@media(max-width:665px) {
+  .searchBar_search_rigth {
+    display: none;
+  }
+  .searchBar_filter div{
+    display: none;
+  }
+  .searchBar_mobile_menu{
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+  .searchBar_mobile_menu img{
+    display: block;
+    background-color: #ffffff;
+  }
+.searchBar_wrapper {
+  grid-column: 1/4;
+  grid-template-columns: 15% 80% 5%; 
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
