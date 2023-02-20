@@ -44,17 +44,14 @@ function Users(
               {item.status === 'active' && <span> <img src={avatar} alt="img" /></span>}
               {item.status !== 'active' && <img src={avatar} alt="img" />}
               <div>
-                <button tabIndex={1}><img src={message} alt="message" /></button>
+                <button><img src={message} alt="message" /></button>
                 <button
                   onClick={(e) => e.currentTarget.id = 'users_btn_email'}
                   onBlur={(e) => e.currentTarget.id = ''}
-                  title="for open E-MAIL one click"
-                  tabIndex={2} >
+                  title="for open E-MAIL one click" >
                   <img src={dots} alt="dots" />
                 </button>
-                <p
-                  style={item.email.length > 35 ? { fontSize: '10px' } : {}}
-                >{item.email}</p>
+                <p style={item.email.length > 35 ? { fontSize: '10px' } : {}}>{item.email}</p>
               </div>
             </div>
             <h5 className='cart_users_wrapper_h5'>{item.name}</h5>

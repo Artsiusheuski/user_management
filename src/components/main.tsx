@@ -12,7 +12,7 @@ function Main() {
 
   const [currentPage, setCurrentPage] = useState(1);
   //for exemple pagination
-  const usersForPage: number = 1;
+  const usersForPage: number = 5;
 
   const lastUsersIndex: number = currentPage * usersForPage;
   const firstUsersIndex: number = lastUsersIndex - usersForPage;

@@ -5,9 +5,9 @@ function Pagination({ totalUsers, usersForPage, paginate }: { totalUsers: number
     pageNumbers.push(i)
   }
   // for example pagination
-  if (pageNumbers.length > 7) {
-    pageNumbers = [1, 2, 3, '...', 8, 9, 10]
-  }
+  // if (pageNumbers.length > 7) {
+  //   pageNumbers = [1, 2, 3, '...', 8, 9, 10]
+  // }
 
   return (
     <>
