@@ -19,7 +19,8 @@ function Footer() {
       <ul>
         {image.map((img: string, ind: number) =>
           <li key={ind} onClick={(e) => e.currentTarget.id = 'active_btn'}
-            onBlur={(e: any) => e.currentTarget.id = ''}>
+            onBlur={(e: any) => e.currentTarget.id = ''}
+            tabIndex={1}>
             <img className={img === avatar ? 'wrapper_footer_avatar' : ''}
               src={img} alt="menu" />
             <span></span>
