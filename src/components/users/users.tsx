@@ -19,6 +19,7 @@ function Users(
       <div className='main_users_headers'>
         <div className='main_users_title'>
           <h4 className='main_general_title'>Users</h4>
+
           <span className='main_users_count'>{filterUsersFun(filterUsers, users).length}</span>
         </div>
         <div className='main_users_btn'>
@@ -36,7 +37,7 @@ function Users(
         </div>
       </div>
       <div className='users_wrapper'>
-        {filterUsersFun(filterUsers, currentUsers).map((item: any, ind: number) =>
+        {filterUsersFun(filterUsers, users).map((item: any, ind: number) =>
           <div
             className={ind < 3 ? 'cart_users_wrapper cart_users_width' : 'cart_users_wrapper'}
             key={item.id}>

@@ -1,4 +1,5 @@
-function Pagination({ totalUsers, usersForPage, paginate }: { totalUsers: number; usersForPage: number; paginate: (arg0: number) => void; }) {
+function Pagination({ totalUsers, usersForPage, paginate }:
+  { totalUsers: number; usersForPage: number; paginate: (arg0: number) => void; }) {
   let pageNumbers: any[] = [];
 
   for (let i = 1; i <= Math.ceil(totalUsers / usersForPage); i++) {

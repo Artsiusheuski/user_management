@@ -1,6 +1,7 @@
 import search from '../img/iconSearch.png'
 import { useUsers } from '../hooks/getUsers';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../store/hooks';
 import { searchUsers } from '../store/usersSlice';
 import iconSearchPlus from "../img/iconSearchPlus.png"
 import filter from "../img/filter.png";
@@ -10,7 +11,7 @@ import headerMenu from "../img/headerMenu.png";
 
 function SearchBar() {
   const { users } = useUsers();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function hundleSearchUsers(e: React.FormEvent<HTMLInputElement>) {
     const variaty = users.filter((item: any) => item.name.toLocaleLowerCase().includes(e.currentTarget.value));
@@ -23,7 +24,7 @@ function SearchBar() {
       <p className='searchBar_wrapper_p'></p>
       <div className='searchBar_search'>
         <span><img src={search} alt='Search' /></span>
-        <input
+        <input className='koka'
           onBlur={() => dispatch(searchUsers(""))}
           onInput={(e: React.FormEvent<HTMLInputElement>) => hundleSearchUsers(e)}
           type="search" placeholder='Search..' />

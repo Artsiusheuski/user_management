@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { chengeGlobslClass } from '../store/usersSlice'
+// import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../store/hooks';
+import { changeGlobslClass } from '../store/usersSlice'
 
 function Header() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [classDropdown, setDropdown] = useState('header_nav_list')
   const [nameDropdown, setNameDropdown] = useState('My details')
   const [spanDegry, setSpanDegry] = useState('dropdawn_list_top')
 
   function hundlerUsers(e: any): void {
-    e.target.tagName !== 'UL' && dispatch(chengeGlobslClass(e.target.innerText));
+    e.target.tagName !== 'UL' && dispatch(changeGlobslClass(e.target.innerText));
 
     let ul: string = e.currentTarget;
     let childNodes: any[] = e.currentTarget.childNodes;
