@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import { useAppDispatch } from '../store/hooks';
 import { changeGlobslClass } from '../store/usersSlice'
 

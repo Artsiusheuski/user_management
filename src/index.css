@@ -12,6 +12,7 @@
   padding: 0;
   color: #4A4F5E;
   font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* This should remove blue background on click  */
 }
 
 #root{
