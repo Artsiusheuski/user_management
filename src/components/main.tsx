@@ -30,7 +30,7 @@ function Main() {
   return (
     <>
       <main className='main_wrapper'>
-        {loading && <marker>Loading...</marker>}
+        {loading && <h1>Loading...</h1>}
         {error && <h1>{error}</h1>}
 
         <OnlineUsers onlineUsers={onlineUsers} />
