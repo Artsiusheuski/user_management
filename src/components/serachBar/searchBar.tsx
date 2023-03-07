@@ -1,11 +1,11 @@
-import search from "../img/iconSearch.png";
-import { useUsers } from "../hooks/getUsers";
-import { useAppDispatch } from "../store/hooks";
-import { searchUsers } from "../store/usersSlice";
-import iconSearchPlus from "../img/iconSearchPlus.png";
-import filter from "../img/filter.png";
-import clr from "../img/clr.png";
-import headerMenu from "../img/headerMenu.png";
+import search from "../../img/iconSearch.png";
+import { useUsers } from "../../hooks/getUsers";
+import { useAppDispatch } from "../../store/hooks";
+import { searchUsers } from "../../store/usersSlice";
+import iconSearchPlus from "../../img/iconSearchPlus.png";
+import filter from "../../img/filter.png";
+import clr from "../../img/clr.png";
+import headerMenu from "../../img/headerMenu.png";
 
 function SearchBar() {
   const { users } = useUsers();

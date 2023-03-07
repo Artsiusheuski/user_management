@@ -1,5 +1,6 @@
 @import  "./users.css";
 @import  "./onlineUsers.css";
+@import  "./form.css";
 
 .main_wrapper {
   grid-area: main;

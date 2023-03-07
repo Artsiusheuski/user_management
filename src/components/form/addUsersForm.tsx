@@ -1,7 +1,7 @@
 function FormAddUser() {
   return (
-    <form action='#'>
-      <fieldset>
+    <div className='users_form_block'>
+      <form className='users_form_form' action='#'>
         <legend>Personal information</legend>
         <label htmlFor=''>
           Name: <input type='text' />
@@ -15,8 +15,8 @@ function FormAddUser() {
         <label htmlFor=''>
           Place of Birth: <input type='text' />
         </label>
-      </fieldset>
-    </form>
+      </form>
+    </div>
   );
 }
 

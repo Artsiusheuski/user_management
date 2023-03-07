@@ -1,7 +1,6 @@
 import OnlineUsers from "./users/onlineUsers";
 import Users from "./users/users";
 import { useUsers } from "../hooks/getUsers";
-// import { useSelector } from 'react-redux/es/exports';
 import { useAppSelector } from "../store/hooks";
 import { selectUsers } from "../store/usersSlice";
 
@@ -32,7 +31,6 @@ function Main() {
       <main className='main_wrapper'>
         {loading && <h1>Loading...</h1>}
         {error && <h1>{error}</h1>}
-
         <OnlineUsers onlineUsers={onlineUsers} />
         <Users
           filterUsers={filterUsers}
