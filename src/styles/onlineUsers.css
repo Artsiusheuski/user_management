@@ -81,7 +81,7 @@
   background: #DEE2E8;
 }
 
-.main_onlineusers_rings span:first-child {
+#rings_active {
   background: #5D5FEF;
 }
 
