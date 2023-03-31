@@ -6,16 +6,24 @@ import iconSearchPlus from "../../img/iconSearchPlus.png";
 import filter from "../../img/filter.png";
 import clr from "../../img/clr.png";
 import headerMenu from "../../img/headerMenu.png";
+import MyCalendar from "./customCalendar";
+import { useState } from "react";
 
 function SearchBar() {
   const { users } = useUsers();
   const dispatch = useAppDispatch();
+  const [calendarWrapper, setCalendarWrapper] = useState("none");
 
   function hundleSearchUsers(e: React.FormEvent<HTMLInputElement>) {
     const variaty = users.filter((item: any) =>
       item.name.includes(e.currentTarget.value)
     );
     dispatch(searchUsers(variaty));
+  }
+
+  function hundlerCalendar(event: React.MouseEvent<HTMLElement>): void {
+    setCalendarWrapper("calendar_wrapper");
+    console.log(event);
   }
 
   return (
@@ -48,10 +56,21 @@ function SearchBar() {
             <span>Filters</span>
           </button>
         </div>
-        <div>
+        <div
+          onClick={(event: React.MouseEvent<HTMLElement>) =>
+            hundlerCalendar(event)
+          }
+        >
           <button type='button'>
             <img src={clr} alt='calendario' />
           </button>
+        </div>
+        <div
+          tabIndex={-1}
+          id={calendarWrapper}
+          onBlur={() => setCalendarWrapper("none")}
+        >
+          <MyCalendar />
         </div>
         <p className='searchBar_mobile_menu'>
           <img src={headerMenu} alt='headerMenu' />

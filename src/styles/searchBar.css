@@ -135,3 +135,17 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
   }
 }
+
+
+#none{
+  display: none;
+}
+
+#calendar_wrapper{
+  display: flex;
+  width: 200px;
+  height: 150px;
+  position:absolute ;
+  background: red;
+  z-index: 2;
+}
