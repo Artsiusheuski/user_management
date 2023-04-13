@@ -23,7 +23,6 @@ function SearchBar() {
 
   function hundlerCalendar(event: React.MouseEvent<HTMLElement>): void {
     setCalendarWrapper("calendar_wrapper");
-    console.log(event);
   }
 
   return (
